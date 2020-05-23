@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Registration</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <img src="images/logo.png" width="75" alt="">
+        <h1>Seminar Registration</h1>
+        <form action="Save" method="POST">
+            <table width="50%" id="cus_table1">
+                <tr>
+                    <td>1. Participant Name *</td>
+                    <td><input type="text" name="pname" maxlength="80" size="50" placeholder="Participant Name" requrired></td>
+                </tr>
+                <tr>
+                    <td>2. Mobile No. *</td>
+                    <td><input type="text" name="pmobile" maxlength="10" size="20" pattern="[0-9]+"  placeholder="Mobile No " required></td>
+                </tr>
+                <tr>
+                    <td>3. Email *</td>
+                    <td><input type="email" name="pemail" size="50" placeholder="Email for confirmation mail" required></td>
+                </tr>
+                <tr>
+                    <td>4. Affiliation / Institution</td>
+                    <td><input type="text" name="paffi" maxlength="90" placeholder="Institute / Company Name" size="50"></td>
+                </tr>
+                <tr>
+                    <td>5. Occupation Type</td>
+                    <td><select name="poccu">
+                        <option value="student">Student</option>
+                        <option value="scholar">Research Scholar</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="industry">Industry</option>
+                        <option value="others">Others</option>
+                    </select>    </td>
+                </tr>
+                <tr>
+                    <td colspan=2 align="center"><input type="submit"> <input type="reset"></td>
+
+                </tr>   
+                <tr>
+                    <td colspan=2 align="center"> <a href="View">List of Registered Participants</a> </td>
+                </tr>     
+       
+            </table>
+
+        </form>
+                
+    </center>
+</body>
+
+
+</html>
