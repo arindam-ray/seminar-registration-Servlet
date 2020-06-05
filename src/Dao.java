@@ -7,9 +7,9 @@ public class Dao {
     Connection con = null;
     try {
       Class.forName("com.mysql.jdbc.Driver");
-      String jdbcUrl = Credentials.jdbcUrl;
-      String username = Credentials.username;
-      String password = Credentials.password;
+      String jdbcUrl =   Credentials.jdbcUrl;
+      String username =  Credentials.username;
+      String password =  Credentials.password;
 
       con = DriverManager.getConnection(jdbcUrl, username, password);
 
