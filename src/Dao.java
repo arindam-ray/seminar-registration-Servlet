@@ -14,6 +14,7 @@ public class Dao {
       con = DriverManager.getConnection(jdbcUrl, username, password);
 
     } catch (Exception e) {
+      GlobalError.errStr = e.toString();
       System.out.println(e);
      
     }

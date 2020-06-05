@@ -16,6 +16,8 @@ public class Message extends HttpServlet {
         String messageText = request.getParameter("messageText");
         int messageType = Integer.parseInt(request.getParameter("messageType"));
         String redirectPage = request.getParameter("redirectPage");
+
+        messageText = GlobalError.errStr;
         
         String color = "black";
 
