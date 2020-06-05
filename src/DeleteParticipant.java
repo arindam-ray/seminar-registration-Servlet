@@ -19,11 +19,13 @@ public class DeleteParticipant extends HttpServlet {
         if (status > 0) {
           // successfuly inserted record
           messageText = "Record Successfully Deleted";
+          GlobalError.errorStrings.add(messageText);
           messageType = 2;
           redirecPage = "View";
         } else {
           // Error occured
           messageText = "Sorry ! Error in Deletion Process";
+          GlobalError.errorStrings.add(messageText);
           messageType = 1;
           redirecPage = "View";
         }

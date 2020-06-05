@@ -14,9 +14,9 @@ public class Dao {
       con = DriverManager.getConnection(jdbcUrl, username, password);
 
     } catch (Exception e) {
-      GlobalError.errStr = e.toString();
-      System.out.println(e);
-     
+      // GlobalError.errStr = e.toString();
+      GlobalError.errorStrings.add(e.toString());
+      System.out.println(e);     
     }
     return con;
   }
@@ -40,6 +40,7 @@ public class Dao {
       con.close();
     } catch (Exception ex) {
       ex.printStackTrace();
+      GlobalError.errorStrings.add(ex.toString());
     }
 
     return status;
@@ -66,6 +67,7 @@ public class Dao {
       con.close();
     } catch (Exception ex) {
       ex.printStackTrace();
+      GlobalError.errorStrings.add(ex.toString());
     }
 
     return status;
@@ -84,6 +86,7 @@ public class Dao {
       con.close();
     } catch (Exception e) {
       e.printStackTrace();
+      GlobalError.errorStrings.add(e.toString());
     }
 
     return status;
@@ -110,6 +113,7 @@ public class Dao {
       con.close();
     } catch (Exception ex) {
       ex.printStackTrace();
+      GlobalError.errorStrings.add(ex.toString());
     }
 
     return p;
@@ -138,6 +142,7 @@ public class Dao {
       con.close();
     } catch (Exception e) {
       e.printStackTrace();
+      GlobalError.errorStrings.add(e.toString());
     }
 
     return list;

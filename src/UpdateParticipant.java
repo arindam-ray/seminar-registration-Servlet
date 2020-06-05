@@ -34,11 +34,13 @@ public class UpdateParticipant extends HttpServlet {
     if (status > 0) {
       // successfuly inserted record
       messageText = "Record Successfully Updated";
+      GlobalError.errorStrings.add(messageText);
       messageType = 2;
       redirecPage = "View";
     } else {
       // Error occured
       messageText = "Sorry ! Error in Registration Modification";
+      GlobalError.errorStrings.add(messageText);
       messageType = 1;
       redirecPage = "View";
     }

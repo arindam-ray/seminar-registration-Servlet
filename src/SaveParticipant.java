@@ -39,11 +39,13 @@ public class SaveParticipant extends HttpServlet {
     if (status > 0) {
       // successfuly inserted record
       messageText = "Record Successfully Inserted";
+      GlobalError.errorStrings.add(messageText);
       messageType = 2;
       redirecPage = "registration.html";
     } else {
       // Error occured
       messageText = "Sorry ! Some Error in Input";
+      GlobalError.errorStrings.add(messageText);
       messageType = 1;
       redirecPage = "registration.html";
     }
